@@ -160,25 +160,11 @@ void app_main()
     ESP_ERROR_CHECK(example_connect());
 
 	gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
-	gpio_set_direction(GPIO_NUM_9, GPIO_MODE_OUTPUT);
-	gpio_set_direction(GPIO_NUM_10, GPIO_MODE_OUTPUT);
-	gpio_set_direction(GPIO_NUM_13, GPIO_MODE_OUTPUT);
-	gpio_set_direction(GPIO_NUM_14, GPIO_MODE_OUTPUT);
+	
 	
 	while(1)
 	{
-	gpio_set_level(GPIO_NUM_4, 0);
-	gpio_set_level(GPIO_NUM_9, 0);
-	gpio_set_level(GPIO_NUM_10, 0);
-	gpio_set_level(GPIO_NUM_13, 0);
-	gpio_set_level(GPIO_NUM_14, 0);
-	vTaskDelay(100);
-	gpio_set_level(GPIO_NUM_4, 1);
-	gpio_set_level(GPIO_NUM_9, 1);
-	gpio_set_level(GPIO_NUM_10, 1);
-	gpio_set_level(GPIO_NUM_13, 1);
-	gpio_set_level(GPIO_NUM_14, 1);
-	vTaskDelay(100);
+	
 	}
 	
     mqtt_app_start();
